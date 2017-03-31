@@ -7,5 +7,8 @@
 	});
 	$("#addButton").click(function(){
 	    //traitement ;
+		var reponsebody = $("#reponsetemplate");
+		console.log(reponsebody);
+		$("#reponses").append(reponsebody.clone());
 	});
 });
