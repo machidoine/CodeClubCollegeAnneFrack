@@ -1,16 +1,19 @@
 ﻿$(document).ready(function(){
 	$("#send").click(function(){
-				var test = 1
+				
 		//traitement
 		console.log("j'ai cliqué");
         console.log($("#message4").val());
 		$("#content").val($("#message4").val());
 	});
+	var test = 1
 	$("#addButton").click(function(){
 	    //traitement ;
 		var reponsebody = $("#reponsetemplate");
 		console.log(reponsebody);
-		$("#reponses").append(reponsebody.clone());
+		reponseBodyCloned = reponsebody.clone();
+		reponseBodyCloned.find("span").html(test);
+		$("#reponses").append(reponseBodyCloned);
 ;
 		console.log (test);
 		test ++;		
