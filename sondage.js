@@ -1,5 +1,6 @@
 ﻿$(document).ready(function(){
 	$("#send").click(function(){
+				var test = 1
 		//traitement
 		console.log("j'ai cliqué");
         console.log($("#message4").val());
@@ -10,5 +11,9 @@
 		var reponsebody = $("#reponsetemplate");
 		console.log(reponsebody);
 		$("#reponses").append(reponsebody.clone());
+;
+		console.log (test);
+		test ++;		
+		
 	});
 });
