@@ -1,9 +1,13 @@
 $(document).ready(function(){
-	console.log("click");
+	var symbole="O";
 	$("td").click(function(e){
-		console.log("click");
-		console.log(e);
-		$(e.currentTarget).html("X");
+		$(e.currentTarget).html(symbole);
+		if(symbole==="X"){
+			symbole="O";
+		}
+		else{
+			symbole="X";
+		}
 	});	
 	
 });
