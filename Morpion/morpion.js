@@ -1,15 +1,22 @@
 $(document).ready(function(){
-	var symbole="O";
+	var nextSymbole="O";
 	$("td").click(function(e){
-		$(e.currentTarget).html(symbole);
-		var v= $(e.currentTarget).html();
-		console.log(v);
-		if(symbole==="X"){
-			symbole="O";
+		var currentValue = $(e.currentTarget).html();
+		console.log(currentValue);
+		if (currentValue==="") {
+			swapNextSymbole();
+			$(e.currentTarget).html(nextSymbole);
+		}
+		
+	});	
+	
+	function swapNextSymbole() {
+		if(nextSymbole==="X"){
+			nextSymbole="O";
 		}
 		else{
-			symbole="X";
+			nextSymbole="X";
 		}
-	});	
+	}
 	
 });
