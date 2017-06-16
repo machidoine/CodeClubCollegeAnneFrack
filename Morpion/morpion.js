@@ -4,14 +4,26 @@ $(document).ready(function(){
 	$("td").click(function(e){
 		var currentValue = $(e.currentTarget).html();
 		console.log(currentValue);
+		
 		if (currentValue==="") {
 			$(e.currentTarget).html(nextSymbole);
 			swapNextSymbole();
 			countHit++;
 			console.log(countHit);
-			
+			if (countHit === 9 ) {
+				var result=isVictory();
+				if (result=="X"){
+					alert ("X a gagné");
+					
+				}else if (result=="O"){
+					alert ("O a gagné");
+				}else {
+					alert ("match nul");
+
+					
+				}
+			}
 		}
-		
 	});	
 	
 	function swapNextSymbole() {
@@ -26,6 +38,11 @@ $(document).ready(function(){
 	$("#reset").click(function(){
 		$("td").html("");
 		nextSymbole="O";
+		countHit=0;
 		console.log("reset");
+		
   });
+ function isVictory () {
+ 
+ }
 });
